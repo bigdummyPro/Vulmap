@@ -224,7 +224,7 @@
                 $webRequestSplat.Proxy = $Proxy
             }
 
-            (Invoke-WebRequest @webRequestSplat).Content | ConvertFrom-Json
+            (Invoke-WebRequest -@webRequestSplat -UseBasicParsing).Content | ConvertFrom-Json
         }
     }
 
